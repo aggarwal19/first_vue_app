@@ -6,7 +6,6 @@
     <button class="btn" v-on:click="valid">submit</button>
     <br/>
     <p> entered number is:{{age}}</p>
-    <br/>
     <p>Cube is: {{cube}}</p>
     <p>{{error}}</p>
   </div>
@@ -29,11 +28,12 @@ export default {
         if(typeof(n)=="number")
         {
           this.cube = n*n*n;
+          this.error = null;
         }
         else
         {
           this.cube = "not possible";
-          this.error = "Error is : only numeric value"
+          this.error = "Error is : only numeric value is allowed";
         }
       }
   }
